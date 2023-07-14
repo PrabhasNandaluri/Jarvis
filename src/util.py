@@ -4,8 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
 
-with open(os.getcwd() + "\Data\Input_Constants.Json", "r") as file:
+with open(os.getcwd() + "/Data/Input_Constants.Json", "r") as file:
     constants = json.load(file)
+
 
 def send_mail(subject: str, body: str, receiver: str) -> bool:
     success_msg: bool
@@ -38,6 +39,7 @@ def send_mail(subject: str, body: str, receiver: str) -> bool:
         success_msg = False
 
     return success_msg
+
 
 def log():
     pass
