@@ -4,6 +4,7 @@ from datetime import date, timedelta
 import pandas_market_calendars as mcal
 import yfinance as yf
 import os
+from util import send_mail
 
 
 class PreMarketAnalysis:
@@ -63,6 +64,8 @@ class PreMarketAnalysis:
             f = open("myfile.html", "x")
             f.write(HTML)
             f.close()
+        subject = f"Premarket Analysis {date.today()}"
+        send_mail(subject, HTML, "prabhasreddy030@gmail.com")
 
 
 if __name__ == "__main__":

@@ -1,2 +1,3 @@
 /.vscode
 /botvenv
+src/__pycache__/util.cpython-310.pyc

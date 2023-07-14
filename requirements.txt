@@ -1,0 +1,5 @@
+pandas
+nsepython
+datetime
+pandas_market_calendars
+yfinance
