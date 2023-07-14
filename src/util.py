@@ -2,9 +2,10 @@ import smtplib
 import json
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
 
-with open("Data\Input_Constants.Json") as f:
-    constants = json.load(f)
+with open(os.getcwd() + "\Data\Input_Constants.Json", "r") as file:
+    constants = json.load(file)
 
 def send_mail(subject: str, body: str, receiver: str) -> bool:
     success_msg: bool
