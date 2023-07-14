@@ -61,9 +61,13 @@ class PreMarketAnalysis:
 
                 except Exception:
                     print("error oeccured while processing for market")
-            f = open("myfile.html", "x")
-            f.write(HTML)
-            f.close()
+            try:
+                f = open("myfile.html", "x")
+            except FileExistsError:
+                f = open("myfile.html", "w")
+            finally:
+                f.write(HTML)
+                f.close()
         subject = f"Premarket Analysis {date.today()}"
         send_mail(subject, HTML, "prabhasreddy030@gmail.com")
 
