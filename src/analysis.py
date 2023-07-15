@@ -82,5 +82,4 @@ if __name__ == "__main__":
         last_working_day = schedule.iloc[-2].name
 
     PMA = PreMarketAnalysis(last_working_day)
-    print(nsepython.nse_fiidii())
     PMA.Run()
