@@ -23,7 +23,7 @@ class PreMarketAnalysis:
             "Dollar Index": "DX-Y.NYB",
         }
         self.Premarket_template: str = (
-            f"{os.getcwd()}\data\\templates\PreMarketAnalysis.html"
+            f"{os.getcwd()}/data/templates/PreMarketAnalysis.html"
         )
 
     def Global_indices(self, ticker) -> pd.DataFrame:
