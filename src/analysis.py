@@ -9,6 +9,7 @@ from util import send_mail
 
 class PreMarketAnalysis:
     def __init__(self, Last_Working_Day) -> None:
+        
         """This Class is Used when U need Create Report for Pre Market Analysis
         input : last woking day(date time)
         output : sned mail"""
